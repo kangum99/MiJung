@@ -1,0 +1,19 @@
+.top-navigation .navbar-brand {
+    background: #ecba52;
+    color: #fff;
+    padding: 15px 25px
+}
+.wrapper{
+    padding: 0 20px
+}
+
+.wrapper-content, #map, #select-random, .select-group{
+    padding: 20px 10px 40px
+}
+.input-group, .input-group-btn {
+    padding: 0px 10px
+}
+.list {
+    color: #ecba52;
+
+}
