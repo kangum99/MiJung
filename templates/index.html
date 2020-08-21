@@ -41,9 +41,8 @@
                 src="//dapi.kakao.com/v2/maps/sdk.js?appkey=37dbec68db6cfba34bfb27b8cd350456"></script>
     </head>
     <body class="top-navigation pace-done" style="padding: 0px;">
-
         <div id="wrapper">
-            <div id="page-wrapper" class="gray-bg" style="height: auto !important; min-height: 0px !important;">
+            <div id="page-wrapper" style="height: auto !important; min-height: 0px !important;">
                 <nav class="navbar sticky-top navbar-light bg-dark">
                     <div class="navbar-header">
                         <a href="index.html" class="navbar-brand">
@@ -65,181 +64,77 @@
                 </nav>
 
                 <div class="tad"><br></div>
-                <center>
-                <br>
-                <!--선택하는곳-->
-                <div class="input-group col-md-6" style="min-width:350px">
-                    <input type="text" class="form-control location_search" placeholder="원하는 장소를 검색 하세요">
-                    <span class="input-group-btn">
+                <div class="gray-bg">
+                    <div class="contain">
+                        <center>
+                            <br>
+                            <!--선택하는곳-->
+                            <div class="input-group col-md-6" style="min-width:350px">
+                                <input type="text" class="form-control location_search" placeholder="원하는 장소를 검색 하세요">
+                                <span class="input-group-btn">
                         <button type="button" class="btn btn-warning">검색</button>
                     </span>
-                </div>
-                <br>
-                <!--내용-->
-
-                    <div class="wrapper wrapper-content">
-                        <div class="wrapper">
-                            <!--지도-->
-                            <p>올림픽을 원하는 범위 만큼 지도를 움직이고 확대하세요</p>
-                            <div id="map" style="width:500px;height:400px;background-color:gray;"></div>
-                            <script type="text/javascript">
-                                var container = document.getElementById('map');
-                                var options = {
-                                    center: new kakao.maps.LatLng(33.450701, 126.570667),
-                                    level: 3
-                                };
-
-                                var map = new kakao.maps.Map(container, options);
-                            </script>
-                            <br>
-                            <p>원하는 N강 수를 정하세요!</p><br>
-
-                            <div>
-                                <select class="form-control " style="width:500px;" data-op="open" data-u="4Q19MZ">
-                                    <option value="128">128강</option>
-                                    <option value="64">64강</option>
-                                    <option value="32">32강</option>
-                                    <option value="16" selected="">16강</option>
-                                    <option value="8">8강</option>
-                                    <option value="4">4강</option>
-                                </select>
                             </div>
-                            <div class="select-group">
+                            <br>
+                            <!--내용-->
+
+                            <div class="wrapper wrapper-content">
+                                <div class="wrapper">
+                                    <!--지도-->
+                                    <p>올림픽을 원하는 범위 만큼 지도를 움직이고 확대하세요</p>
+                                    <div id="map" style="width:500px;height:400px;background-color:gray;"></div>
+<!--                                    <script type="text/javascript">-->
+<!--                                        var container = document.getElementById('map');-->
+<!--                                        var options = {-->
+<!--                                            center: new kakao.maps.LatLng(33.450701, 126.570667),-->
+<!--                                            level: 3-->
+<!--                                        };-->
+
+<!--                                        var map = new kakao.maps.Map(container, options);-->
+<!--                                    </script>-->
+                                    <br>
+                                    <p>원하는 N강 수를 정하세요!</p><br>
+
+                                    <div>
+                                        <select class="form-control " style="width:500px;" data-op="open"
+                                                data-u="4Q19MZ">
+                                            <option value="128">128강</option>
+                                            <option value="64">64강</option>
+                                            <option value="32">32강</option>
+                                            <option value="16" selected="">16강</option>
+                                            <option value="8">8강</option>
+                                            <option value="4">4강</option>
+                                        </select>
+                                    </div>
+                                    <div class="select-group">
                                 <span class="select-group-btn">
                                     <a href="start.html" class="btn btn-warning">시작하기</a>
-                                    <a href="#" class="btn btn-dark">공유하기</a>
-                                    <a href="rank.html" class="btn btn-warning">랭킹보기</a>
+                                    <a href="rank.html" class="btn btn-dark">랭킹보기</a>
+                                    <button type="button" class="btn btn-warning fshare">공유하기</button>
                                 </span>
+                                    </div>
+                                    <div class="input-group divshare" style="display: none">
+                                                <span class="input-group-btn">
+                                                <button type="button" class="btn btn-sm btn-dark fcopy">복사</button>
+                                                </span>
+                                        <input type="text" class="form-control shareurl"
+                                               value="https://www.mijung.co.kr/w/4Q19MZ">
+                                    </div>
+                                    <div class="sharemsg"></div>
+
+                                </div>
                             </div>
 
-                        </div>
+                            <br><br>
+                        </center>
                     </div>
-
-                    <br><br>
-                </center>
+                </div>
             </div>
+
+
         </div>
         <script type="text/javascript">
-            $(window).scroll(function () {
-                if ($(document).height() <= $(window).scrollTop() + $(window).height()) {
-                    loadmore();
-                }
-            });
 
-            function loadmore() {
-                var val = $('.wrapper-content').attr("data-cnt"); //document.getElementById("row_no").value;
-                var ns = $('.nsearch').val();
-                var st = $('.st .btn-primary').val();
-                var dt = $('.dt .btn-primary').val();
-                var tp = $('.tp .btn-primary').val();
-
-                $.ajax({
-                    type: 'post',
-                    url: 'w/get_list.php',
-                    cache: false,
-                    data: {
-                        l: '',
-                        s: val,
-                        n: ns,
-                        st: st,
-                        dt: dt,
-                        tp: tp
-                    },
-                    async: false,
-                    success: function (response) {
-                        if (response == '') {
-                            $('.listmore').html('<i class="fa fa-info-circle"></i> 마지막 리스트입니다.');
-                        } else {
-                            $('.wrapper-content').attr("data-cnt", Number(val) + 10);
-                            $('.wrapper-content').append(response);
-
-                        }
-                    }
-                });
-            }
-
-
-            $("div.btn-group.sc button.btn").click(function () {
-                $(this).parent().find(".btn-primary").toggleClass('btn-primary btn-white');
-                $(this).toggleClass('btn-white btn-primary');
-
-                if ($('.st .btn-primary').val() == 'new') {
-                    $('.dt').attr("style", "display:none");
-                } else {
-                    $('.dt').attr("style", "display:inline");
-                }
-                action();
-            });
-
-
-            function action() {
-                $('.wrapper-content').empty();
-                $('.wrapper-content').attr("data-cnt", "0");
-                loadmore();
-            }
-
-            $('.nsb').click(function (e) {
-                action();
-            });
-
-
-            $('.nsearch').keyup(function (e) {
-                if (e.keyCode == 13) action();
-            });
-
-            $('#page-wrapper').on('click', '.listmore', function () {
-                loadmore();
-            });
-
-            $('.wrapper-content').on('click', '.product-desc', function (event) {
-                event.preventDefault();
-                var uid;
-                uid = $(this).attr('data-id');
-                var openNewWindow = window.open("about:blank");
-                $.ajax({
-                    url: "w/play_reset.php",
-                    success: function () {
-                        openNewWindow.location.href = "w/" + uid;
-                    }
-                });
-            });
-            $('.wrapper-content').on('click', '.frank', function (e) {
-                e.stopPropagation();
-                //window.location.href = "w/rank/" + $(this).parent().attr("data-id");
-            });
-            $('.wrapper-content').on('click', '.fedit', function (e) {
-                e.stopPropagation();
-                window.location.href = "w/make/" + $(this).parent().attr("data-id");
-            });
-            $('.wrapper-content').on('click', '.fdelete', function (e) {
-                e.stopPropagation();
-                var $divg = $(this).parent();
-                var uid = $divg.attr("data-id");
-                swal({
-                    title: "삭제하시겠습니까?",
-                    text: "삭제하면 복구할 수 없습니다!",
-                    type: "warning",
-                    showCancelButton: true,
-                    confirmButtonColor: "#DD6B55",
-                    confirmButtonText: "네, 삭제할게요!",
-                    cancelButtonText: "취소",
-                    closeOnConfirm: false,
-                }, function () {
-                    $.ajax({
-                        type: "POST",
-                        url: "w/make/frm_del.php",
-                        data: "uid=" + uid,
-                        success: function (data) {
-                            if (data == "true") {
-                                swal("삭제되었습니다!", "이상형월드컵이 삭제되었습니다.", "success");
-                                window.location.href = "/";
-                            } else {
-                                swal("실패!", "삭제에 실패하였습니다.", "error");
-                            }
-                        }
-                    });
-                });
-            });
             $('.wrapper-content').on('click', '.fshare', function (e) {
                 e.stopPropagation();
                 $(this).parent().next('.divshare').show();
