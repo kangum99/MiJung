@@ -31,15 +31,11 @@
                 display: flex;
                 flex-wrap: wrap;
             }
-
-            .row:before, .row:after {
-                display: none !important;
-            }
         </style>
     </head>
-    <body class="top-navigation  pace-done" style="padding: 0px;">
+    <body class="top-navigation" style="padding: 0px;">
         <div id="wrapper">
-            <div id="page-wrapper" class="gray-bg" style="height: auto !important; min-height: 0px !important;">
+            <div id="page-wrapper" style="height: auto !important; min-height: 0px !important;">
                 <nav class="navbar sticky-top navbar-light bg-dark">
                     <div class="navbar-header">
                         <a href="index.html" class="navbar-brand">
@@ -61,66 +57,201 @@
                 </nav>
                 <div class="tad"><br></div>
                 <br>
-                <div class="btn-group sc st" style="display:inline;">
-                    <button class="btn btn-primary" type="button" value="hot" title="기간내 플레이수 기준">인기순</button>
-                    <button class="btn btn-white" type="button" style="margin-right:12px" value="new" title="수정일시 기준">
-                        최신순
-                    </button>
-                </div>
-                <div class="btn-group sc dt" style="display:inline;">
-                    <button class="btn btn-primary" type="button" value="7777">전체</button>
-                    <button class="btn btn-white" type="button" value="30">월</button>
-                    <button class="btn btn-white" type="button" value="7">주</button>
-                    <button class="btn btn-white" type="button" style="margin-right:12px" value="1">일</button>
-                </div>
-                <div class="btn-group sc tp" style="display:inline;">
-                    <button class="btn btn-primary" type="button" value="all">전체</button>
-                    <button class="btn btn-white" type="button" value="image">이미지</button>
-                    <button class="btn btn-white" type="button" style="margin-right:12px" value="video">동영상</button>
-                </div>
-                <div class="input-group col-md-6" style="min-width:350px">
-                    <input type="text" class="form-control nsearch" placeholder="월드컵 제목 또는 인물 이름 으로 검색하세요."> <span
-                        class="input-group-btn"> <button type="button" class="btn btn-primary nsb">검색</button></span>
-                </div>
-                <div class="wrapper wrapper-content" data-cnt="10">
-                    <div class="row equal">
-                        <div class="col-xs-6 col-sm-3 col-lg-2" style="padding:2px">
-                            <div class="ibox">
-                                <div class="ibox-content product-box">
-                                    <div class="product-imitation" style="height:200px;padding:0px">
-                                        <div style="float:left;width:50%;height:180px;background-image: url('https://img.piku.co.kr/w/uploads/4Q19MZ/3e2df8ea5985b79ac71087a938106e27.jpg');background-repeat:no-repeat;background-size: cover;background-position: center top;display:inline-block;">
-                                        </div>
-                                        <div style="width:50%;height:180px;background-image: url('https://img.piku.co.kr/w/uploads/4Q19MZ/7a5086b19b86ab9d68286257edd2877d.jpg');background-repeat:no-repeat;background-size: cover;background-position: center top;display:inline-block;">
-                                        </div>
-                                        <div style="float:left;color:#676a6c;width:50%;max-height:20px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;display:inline-block;">
-                                            BTS 뷔
-                                        </div>
-                                        <div style="color:#676a6c;width:50%;max-height:20px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;display:inline-block;">
-                                            BTS 정국
-                                        </div>
-                                    </div>
-                                    <div class="product-desc" style="cursor:Pointer" data-id="4Q19MZ">
-                                        <a href="#" class="product-name">[고화질, 최신] 남자 아이돌 월드컵</a>
-                                        <div class="small m-t-xs">정면 위주의 세로 레전드 사진 (객관적인 얼굴 판단 가능)</div>
-                                        <div class="m-t text-righ">
-                                            <div class="btn-group" data-id="4Q19MZ">
-                                                <a href="start.html"
-                                                   class="btn btn-warning">시작하기</a>
-                                                <a href="rank.html"
-                                                   class="btn btn-dark">랭킹보기</a>
-                                                <button type="button" class="btn btn-warning">공유
-                                                </button>
+                <div class="gray-bg">
+                    <div class="contain">
+                        <h2>지역을 먼저 검색 하세요!</h2>
+                        <div class="search-group">
 
+                            <select class="form-control " style="width:200px;display: inline" data-op="open"
+                                    data-u="4Q19MZ">
+                                <option value="gyeonggi">경기도</option>
+                                <option value="seoul">서울시</option>
+                                <option value="inchean">인천시</option>
+                            </select>
+                            <select class="form-control " style="width:200px;display: inline" data-op="open"
+                                    data-u="4Q19MZ">
+                                <option value="seoul">수원시</option>
+                                <option value="gyeonggi">화성시</option>
+                                <option value="inchean">안양시</option>
+                            </select>
+                            <select class="form-control " style="width:200px;display: inline" data-op="open"
+                                    data-u="4Q19MZ">
+                                <option value="seoul">장안구</option>
+                                <option value="gyeonggi">팔달구</option>
+                                <option value="inchean">홀리구</option>
+                            </select>
+                            <select class="form-control " style="width:200px;display: inline" data-op="open"
+                                    data-u="4Q19MZ">
+                                <option value="seoul">조원동</option>
+                                <option value="gyeonggi">송죽동</option>
+                                <option value="inchean">행복동</option>
+                            </select>
+                            <button type="button" style="display: inline" class="btn btn-warning">검색</button>
+                        </div>
+                        <br>
+                        <div>
+                            <select class="form-control " style="width:200px;display: inline" data-op="open"
+                                    data-u="4Q19MZ">
+                                <option value="seoul">32강</option>
+                                <option value="gyeonggi">16강</option>
+                                <option value="inchean">4강</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" style="display: inline" class="form-control col-md-6"
+                                   placeholder="월드컵 제목을 검색하세요.">
+                            <button type="button" style="display: inline" class="btn btn-dark">검색</button>
+                        </div>
+
+                        <div class="category">
+                            <div class="wrapper wrapper-content " style=" padding: 20px 20px" data-cnt="10">
+                                <div class="row equal">
+                                    <div class="col-sm-3 col-lg-2" style="padding: 2px">
+
+                                        <div class="product-box">
+                                            <div class="product-imitation" style="height:200px;width:400px;padding:0px">
+                                                <div style="float:left;width:50%;height:180px;background-image: url('https://img.piku.co.kr/w/uploads/4Q19MZ/3e2df8ea5985b79ac71087a938106e27.jpg');background-repeat:no-repeat;background-size: cover;background-position: center top;display:inline-block;">
+                                                </div>
+                                                <div style="width:50%;height:180px;background-image: url('https://img.piku.co.kr/w/uploads/4Q19MZ/7a5086b19b86ab9d68286257edd2877d.jpg');background-repeat:no-repeat;background-size: cover;background-position: center top;display:inline-block;">
+                                                </div>
+                                                <div style="float:left;color:#676a6c;width:50%;max-height:20px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;display:inline-block;">
+                                                    BTS 뷔
+                                                </div>
+                                                <div style="color:#676a6c;width:50%;max-height:20px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;display:inline-block;">
+                                                    BTS 정국
+                                                </div>
                                             </div>
-                                            <div class="input-group divshare" style="display:none">
+
+                                            <div class="product-desc" data-id="4Q19MZ">
+                                                <div class="product-name">데이트 맛집</div>
+                                                <div class="small">분위기 강추, 음식점이름, 주소</div>
+                                                <br>
+                                                <div class="text-right">
+                                                    <div class="btn-group" style="display: inline" data-id="4Q19MZ">
+                                                        <a href="start.html"
+                                                           class="btn btn-warning">시작하기</a>
+                                                        <a href="rank.html"
+                                                           class="btn btn-dark">랭킹보기</a>
+                                                        <button type="button" class="btn btn-warning"
+                                                                onclick="myPass()">수정하기
+                                                        </button>
+                                                        <button type="button" class="btn btn-dark fshare">공유하기
+                                                        </button>
+
+                                                    </div>
+                                                    <div class="input-group divshare" style="display: none">
                                                 <span class="input-group-btn">
-                                                <button type="button" class="btn btn-sm btn-success fcopy"><i class="fa fa-copy"></i>복사</button>
+                                                <button type="button" class="btn btn-sm btn-dark fcopy">복사</button>
                                                 </span>
-                                                <input type="text" class="form-control input-sm shareurl"
-                                                       value="https://www.piku.co.kr/w/4Q19MZ">
+                                                        <input type="text" class="form-control shareurl"
+                                                               value="https://www.mijung.co.kr/w/4Q19MZ">
+                                                    </div>
+                                                    <div class="sharemsg"></div>
+                                                </div>
                                             </div>
-                                            <div class="sharemsg"></div>
                                         </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper wrapper-content " style=" padding: 20px 20px" data-cnt="10">
+                                <div class="row equal">
+                                    <div class="col-sm-3 col-lg-2" style="padding: 2px">
+
+                                        <div class="product-box">
+                                            <div class="product-imitation"
+                                                 style="height:200px;width:400px;padding:0px">
+                                                <div style="float:left;width:50%;height:180px;background-image: url('https://img.piku.co.kr/w/uploads/4Q19MZ/3e2df8ea5985b79ac71087a938106e27.jpg');background-repeat:no-repeat;background-size: cover;background-position: center top;display:inline-block;">
+                                                </div>
+                                                <div style="width:50%;height:180px;background-image: url('https://img.piku.co.kr/w/uploads/4Q19MZ/7a5086b19b86ab9d68286257edd2877d.jpg');background-repeat:no-repeat;background-size: cover;background-position: center top;display:inline-block;">
+                                                </div>
+                                                <div style="float:left;color:#676a6c;width:50%;max-height:20px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;display:inline-block;">
+                                                    BTS 뷔
+                                                </div>
+                                                <div style="color:#676a6c;width:50%;max-height:20px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;display:inline-block;">
+                                                    BTS 정국
+                                                </div>
+                                            </div>
+
+                                            <div class="product-desc" data-id="4Q19MZ">
+                                                <div class="product-name">데이트 맛집</div>
+                                                <div class="small">분위기 강추, 음식점이름, 주소</div>
+                                                <br>
+                                                <div class="">
+                                                    <div class="btn-group" style="display: inline" data-id="4Q19MZ">
+                                                        <a class="btn btn-warning" href="start.html"
+                                                        >시작하기</a>
+                                                        <a class="btn btn-dark" href="rank.html"
+                                                        >랭킹보기</a>
+                                                        <a href="fix.html"
+                                                           class="btn btn-warning">수정하기</a>
+                                                        <button type="button" class="btn btn-dark">공유하기
+                                                        </button>
+
+                                                    </div>
+                                                    <div class="input-group divshare" style="display:none">
+                                                            <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-sm btn-success fcopy">복사</button>
+                                                            </span>
+                                                        <input type="text" class="form-control input-sm shareurl"
+                                                               value="https://www.piku.co.kr/w/4Q19MZ">
+                                                    </div>
+                                                    <div class="sharemsg"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrapper wrapper-content " style=" padding: 20px 20px" data-cnt="10">
+                                <div class="row equal">
+                                    <div class="col-sm-3 col-lg-2" style="padding: 2px">
+
+                                        <div class="product-box">
+                                            <div class="product-imitation"
+                                                 style="height:200px;width:400px;padding:0px">
+                                                <div style="float:left;width:50%;height:180px;background-image: url('https://img.piku.co.kr/w/uploads/4Q19MZ/3e2df8ea5985b79ac71087a938106e27.jpg');background-repeat:no-repeat;background-size: cover;background-position: center top;display:inline-block;">
+                                                </div>
+                                                <div style="width:50%;height:180px;background-image: url('https://img.piku.co.kr/w/uploads/4Q19MZ/7a5086b19b86ab9d68286257edd2877d.jpg');background-repeat:no-repeat;background-size: cover;background-position: center top;display:inline-block;">
+                                                </div>
+                                                <div style="float:left;color:#676a6c;width:50%;max-height:20px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;display:inline-block;">
+                                                    BTS 뷔
+                                                </div>
+                                                <div style="color:#676a6c;width:50%;max-height:20px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;display:inline-block;">
+                                                    BTS 정국
+                                                </div>
+                                            </div>
+
+                                            <div class="product-desc" data-id="4Q19MZ">
+                                                <div class="product-name">데이트 맛집</div>
+                                                <div class="small">분위기 강추, 음식점이름, 주소</div>
+                                                <br>
+                                                <div class="">
+                                                    <div class="btn-group" style="display: inline" data-id="4Q19MZ">
+                                                        <a class="btn btn-warning" href="start.html"
+                                                        >시작하기</a>
+                                                        <a class="btn btn-dark" href="rank.html"
+                                                        >랭킹보기</a>
+                                                        <a href="fix.html"
+                                                           class="btn btn-warning">수정하기</a>
+                                                        <button type="button" class="btn btn-dark">공유하기
+                                                        </button>
+
+                                                    </div>
+                                                    <div class="input-group divshare" style="display:none">
+                                                            <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-sm btn-success fcopy">복사</button>
+                                                            </span>
+                                                        <input type="text" class="form-control input-sm shareurl"
+                                                               value="https://www.piku.co.kr/w/4Q19MZ">
+                                                    </div>
+                                                    <div class="sharemsg"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -130,126 +261,17 @@
             </div>
         </div>
         <script type="text/javascript">
-            $(window).scroll(function () {
-                if ($(document).height() <= $(window).scrollTop() + $(window).height()) {
-                    loadmore();
-                }
-            });
-
-            function loadmore() {
-                var val = $('.wrapper-content').attr("data-cnt"); //document.getElementById("row_no").value;
-                var ns = $('.nsearch').val();
-                var st = $('.st .btn-primary').val();
-                var dt = $('.dt .btn-primary').val();
-                var tp = $('.tp .btn-primary').val();
-
-                $.ajax({
-                    type: 'post',
-                    url: 'w/get_list.php',
-                    cache: false,
-                    data: {
-                        l: '',
-                        s: val,
-                        n: ns,
-                        st: st,
-                        dt: dt,
-                        tp: tp
-                    },
-                    async: false,
-                    success: function (response) {
-                        if (response == '') {
-                            $('.listmore').html('<i class="fa fa-info-circle"></i> 마지막 리스트입니다.');
-                        } else {
-                            $('.wrapper-content').attr("data-cnt", Number(val) + 10);
-                            $('.wrapper-content').append(response);
-
-                        }
-                    }
-                });
-            }
-
-
-            $("div.btn-group.sc button.btn").click(function () {
-                $(this).parent().find(".btn-primary").toggleClass('btn-primary btn-white');
-                $(this).toggleClass('btn-white btn-primary');
-
-                if ($('.st .btn-primary').val() == 'new') {
-                    $('.dt').attr("style", "display:none");
+            function myPass() {
+                var html;
+                var person = prompt("비밀번호를 적어주세요");
+                if (person == null || person == "") {
+                    alert("실패")
                 } else {
-                    $('.dt').attr("style", "display:inline");
+                    window.location.replace("fix.html");
                 }
-                action();
-            });
 
-
-            function action() {
-                $('.wrapper-content').empty();
-                $('.wrapper-content').attr("data-cnt", "0");
-                loadmore();
             }
 
-            $('.nsb').click(function (e) {
-                action();
-            });
-
-
-            $('.nsearch').keyup(function (e) {
-                if (e.keyCode == 13) action();
-            });
-
-            $('#page-wrapper').on('click', '.listmore', function () {
-                loadmore();
-            });
-
-            $('.wrapper-content').on('click', '.product-desc', function (event) {
-                event.preventDefault();
-                var uid;
-                uid = $(this).attr('data-id');
-                var openNewWindow = window.open("about:blank");
-                $.ajax({
-                    url: "w/play_reset.php",
-                    success: function () {
-                        openNewWindow.location.href = "w/" + uid;
-                    }
-                });
-            });
-            $('.wrapper-content').on('click', '.frank', function (e) {
-                e.stopPropagation();
-                //window.location.href = "w/rank/" + $(this).parent().attr("data-id");
-            });
-            $('.wrapper-content').on('click', '.fedit', function (e) {
-                e.stopPropagation();
-                window.location.href = "w/make/" + $(this).parent().attr("data-id");
-            });
-            $('.wrapper-content').on('click', '.fdelete', function (e) {
-                e.stopPropagation();
-                var $divg = $(this).parent();
-                var uid = $divg.attr("data-id");
-                swal({
-                    title: "삭제하시겠습니까?",
-                    text: "삭제하면 복구할 수 없습니다!",
-                    type: "warning",
-                    showCancelButton: true,
-                    confirmButtonColor: "#DD6B55",
-                    confirmButtonText: "네, 삭제할게요!",
-                    cancelButtonText: "취소",
-                    closeOnConfirm: false,
-                }, function () {
-                    $.ajax({
-                        type: "POST",
-                        url: "w/make/frm_del.php",
-                        data: "uid=" + uid,
-                        success: function (data) {
-                            if (data == "true") {
-                                swal("삭제되었습니다!", "이상형월드컵이 삭제되었습니다.", "success");
-                                window.location.href = "/";
-                            } else {
-                                swal("실패!", "삭제에 실패하였습니다.", "error");
-                            }
-                        }
-                    });
-                });
-            });
             $('.wrapper-content').on('click', '.fshare', function (e) {
                 e.stopPropagation();
                 $(this).parent().next('.divshare').show();
@@ -270,5 +292,6 @@
                 }
             });
         </script>
+
     </body>
 </html>
