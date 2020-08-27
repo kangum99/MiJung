@@ -9,11 +9,11 @@
               content="음식점, 맛집, 데이트 코스, 위치별, 지역별, 월드컵, 회식, 결정장애">
         <meta property="og:title" content="음식점 월드컵, 고민고민하지마~ 음식점 월드컵으로 메뉴 정하자(MIJUNG)">
         <meta property="og:description" content="오늘의 메뉴가 고민스러울 때, 고민하지말고 월드컵으로 정해보자!">
-        <meta property="og:image" content="https://www.piku.co.kr/ogimg.jpg">
-        <meta property="og:url" content="https://www.piku.co.kr/">
+        <meta property="og:image" content="https://www.mijung.co.kr/ogimg.jpg">
+        <meta property="og:url" content="https://www.mijung.co.kr/">
         <meta name="robots" content="noimageindex">
-        <link rel="canonical" href="https://www.piku.co.kr/">
-        <link href="gg/css/style.css" rel="stylesheet">
+        <link rel="canonical" href="https://www.mijung.co.kr/">
+        <link href="../static/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
               integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
               crossorigin="anonymous">
@@ -38,19 +38,19 @@
             <div id="page-wrapper" style="height: auto !important; min-height: 0px !important;">
                 <nav class="navbar sticky-top navbar-light bg-dark">
                     <div class="navbar-header">
-                        <a href="index.html" class="navbar-brand">
+                        <a href="/" class="navbar-brand">
                             MIJUNG</a>
                     </div>
                     <div class="nav" id="navbar">
                         <ul class="nav">
                             <li class="nav-item list">
-                                <a class="nav-link " href="index.html">내 위치 기반 월드컵</a>
+                                <a class="nav-link " href="/">내 위치 기반 월드컵</a>
                             </li>
                             <li class="nav-item list">
-                                <a class="nav-link" href="category_index.html"> 지역별 카테고리 월그컵 </a>
+                                <a class="nav-link" href="/category_index"> 지역별 카테고리 월그컵 </a>
                             </li>
                             <li class="nav-item list">
-                                <a class="nav-link" href="make_category.html"> 지역별 카테고리 월그컵 만들기</a>
+                                <a class="nav-link" href="/make_category"> 지역별 카테고리 월그컵 만들기</a>
                             </li>
                         </ul>
                     </div>
@@ -84,12 +84,13 @@
                         </div>
 
                         <div class="category">
-                            <div class="wrapper wrapper-content " style=" padding: 20px 20px" data-cnt="10">
-                                <div class="row equal">
-                                    <div class="col-sm-3 col-lg-2" style="padding: 2px">
+                            <div class="container wrapper wrapper-content" style=" padding: 10px 10px" data-cnt="10">
+                                <div class="row row-cols-4" style="overflow: hidden">
+                                    <div class="col-lg-5" style="padding: 5px">
 
                                         <div class="product-box">
-                                            <div class="product-imitation" style="height:200px;width:400px;padding:0px">
+                                            <div class="product-imitation"
+                                                 style="height:200px;width:400px;padding:0px">
                                                 <div style="float:left;width:50%;height:180px;background-image: url('https://img.piku.co.kr/w/uploads/4Q19MZ/3e2df8ea5985b79ac71087a938106e27.jpg');background-repeat:no-repeat;background-size: cover;background-position: center top;display:inline-block;">
                                                 </div>
                                                 <div style="width:50%;height:180px;background-image: url('https://img.piku.co.kr/w/uploads/4Q19MZ/7a5086b19b86ab9d68286257edd2877d.jpg');background-repeat:no-repeat;background-size: cover;background-position: center top;display:inline-block;">
@@ -107,15 +108,17 @@
                                                 <div class="small">분위기 강추, 음식점이름, 주소</div>
                                                 <br>
                                                 <div class="text-right">
-                                                    <div class="btn-group" style="display: inline" data-id="4Q19MZ">
-                                                        <a href="start.html"
+                                                    <div class="btn-group" style="display: inline"
+                                                         data-id="4Q19MZ">
+                                                        <a href="/start"
                                                            class="btn btn-warning">시작하기</a>
-                                                        <a href="rank.html"
+                                                        <a href="/rank"
                                                            class="btn btn-dark">랭킹보기</a>
                                                         <button type="button" class="btn btn-warning"
                                                                 onclick="myPass()">수정하기
                                                         </button>
-                                                        <button type="button" class="btn btn-dark fshare">공유하기
+                                                        <button type="button" class="btn btn-dark fshare">
+                                                            공유하기
                                                         </button>
 
                                                     </div>
@@ -132,11 +135,7 @@
                                         </div>
 
                                     </div>
-                                </div>
-                            </div>
-                            <div class="wrapper wrapper-content " style=" padding: 20px 20px" data-cnt="10">
-                                <div class="row equal">
-                                    <div class="col-sm-3 col-lg-2" style="padding: 2px">
+                                    <div class="col-lg-5" style="padding: 5px">
 
                                         <div class="product-box">
                                             <div class="product-imitation"
@@ -158,13 +157,15 @@
                                                 <div class="small">분위기 강추, 음식점이름, 주소</div>
                                                 <br>
                                                 <div class="">
-                                                    <div class="btn-group" style="display: inline" data-id="4Q19MZ">
-                                                        <a class="btn btn-warning" href="start.html"
+                                                    <div class="btn-group" style="display: inline"
+                                                         data-id="4Q19MZ">
+                                                        <a class="btn btn-warning" href="/start"
                                                         >시작하기</a>
-                                                        <a class="btn btn-dark" href="rank.html"
+                                                        <a class="btn btn-dark" href="/rank"
                                                         >랭킹보기</a>
-                                                        <a href="fix.html"
-                                                           class="btn btn-warning">수정하기</a>
+                                                        <button type="button" class="btn btn-warning"
+                                                                onclick="myPass()">수정하기
+                                                        </button>
                                                         <button type="button" class="btn btn-dark">공유하기
                                                         </button>
 
@@ -173,7 +174,8 @@
                                                             <span class="input-group-btn">
                                                             <button type="button" class="btn btn-sm btn-success fcopy">복사</button>
                                                             </span>
-                                                        <input type="text" class="form-control input-sm shareurl"
+                                                        <input type="text"
+                                                               class="form-control input-sm shareurl"
                                                                value="https://www.piku.co.kr/w/4Q19MZ">
                                                     </div>
                                                     <div class="sharemsg"></div>
@@ -182,11 +184,7 @@
                                         </div>
 
                                     </div>
-                                </div>
-                            </div>
-                            <div class="wrapper wrapper-content " style=" padding: 20px 20px" data-cnt="10">
-                                <div class="row equal">
-                                    <div class="col-sm-3 col-lg-2" style="padding: 2px">
+                                    <div class="col-lg-5" style="padding: 5px">
 
                                         <div class="product-box">
                                             <div class="product-imitation"
@@ -208,13 +206,15 @@
                                                 <div class="small">분위기 강추, 음식점이름, 주소</div>
                                                 <br>
                                                 <div class="">
-                                                    <div class="btn-group" style="display: inline" data-id="4Q19MZ">
-                                                        <a class="btn btn-warning" href="start.html"
+                                                    <div class="btn-group" style="display: inline"
+                                                         data-id="4Q19MZ">
+                                                        <a class="btn btn-warning" href="/start"
                                                         >시작하기</a>
-                                                        <a class="btn btn-dark" href="rank.html"
+                                                        <a class="btn btn-dark" href="/rank"
                                                         >랭킹보기</a>
-                                                        <a href="fix.html"
-                                                           class="btn btn-warning">수정하기</a>
+                                                        <button type="button" class="btn btn-warning"
+                                                                onclick="myPass()">수정하기
+                                                        </button>
                                                         <button type="button" class="btn btn-dark">공유하기
                                                         </button>
 
@@ -223,7 +223,57 @@
                                                             <span class="input-group-btn">
                                                             <button type="button" class="btn btn-sm btn-success fcopy">복사</button>
                                                             </span>
-                                                        <input type="text" class="form-control input-sm shareurl"
+                                                        <input type="text"
+                                                               class="form-control input-sm shareurl"
+                                                               value="https://www.piku.co.kr/w/4Q19MZ">
+                                                    </div>
+                                                    <div class="sharemsg"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-5" style="padding: 5px">
+
+                                        <div class="product-box">
+                                            <div class="product-imitation"
+                                                 style="height:200px;width:400px;padding:0px">
+                                                <div style="float:left;width:50%;height:180px;background-image: url('https://img.piku.co.kr/w/uploads/4Q19MZ/3e2df8ea5985b79ac71087a938106e27.jpg');background-repeat:no-repeat;background-size: cover;background-position: center top;display:inline-block;">
+                                                </div>
+                                                <div style="width:50%;height:180px;background-image: url('https://img.piku.co.kr/w/uploads/4Q19MZ/7a5086b19b86ab9d68286257edd2877d.jpg');background-repeat:no-repeat;background-size: cover;background-position: center top;display:inline-block;">
+                                                </div>
+                                                <div style="float:left;color:#676a6c;width:50%;max-height:20px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;display:inline-block;">
+                                                    BTS 뷔
+                                                </div>
+                                                <div style="color:#676a6c;width:50%;max-height:20px;overflow: hidden; text-overflow: ellipsis;white-space: nowrap;display:inline-block;">
+                                                    BTS 정국
+                                                </div>
+                                            </div>
+
+                                            <div class="product-desc" data-id="4Q19MZ">
+                                                <div class="product-name">데이트 맛집</div>
+                                                <div class="small">분위기 강추, 음식점이름, 주소</div>
+                                                <br>
+                                                <div class="">
+                                                    <div class="btn-group" style="display: inline"
+                                                         data-id="4Q19MZ">
+                                                        <a class="btn btn-warning" href="/start"
+                                                        >시작하기</a>
+                                                        <a class="btn btn-dark" href="/rank"
+                                                        >랭킹보기</a>
+                                                        <button type="button" class="btn btn-warning"
+                                                                onclick="myPass()">수정하기
+                                                        </button>
+                                                        <button type="button" class="btn btn-dark">공유하기
+                                                        </button>
+
+                                                    </div>
+                                                    <div class="input-group divshare" style="display:none">
+                                                            <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-sm btn-success fcopy">복사</button>
+                                                            </span>
+                                                        <input type="text"
+                                                               class="form-control input-sm shareurl"
                                                                value="https://www.piku.co.kr/w/4Q19MZ">
                                                     </div>
                                                     <div class="sharemsg"></div>
@@ -233,11 +283,13 @@
 
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
         <script type="text/javascript">
             function myPass() {
@@ -246,7 +298,7 @@
                 if (person == null || person == "") {
                     alert("실패")
                 } else {
-                    window.location.replace("fix.html");
+                    window.location.replace("/fix");
                 }
 
             }
