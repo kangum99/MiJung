@@ -9,7 +9,7 @@
               content="음식점, 맛집, 데이트 코스, 위치별, 지역별, 월드컵, 회식, 결정장애">
         <meta property="og:title" content="음식점 월드컵, 고민고민하지마~ 음식점 월드컵으로 메뉴 정하자(MIJUNG)">
         <meta property="og:description" content="오늘의 메뉴가 고민스러울 때, 고민하지말고 월드컵으로 정해보자!">
-        <meta property="og:image" content="https://www.mijung.co.kr/ogimg.jpg">
+        <meta property="og:image" content="{{ url_for('static', filename='ogimage.jpg') }}">
         <meta property="og:url" content="https://www.mijung.co.kr/">
         <meta name="robots" content="noimageindex">
         <link rel="canonical" href="https://www.mijung.co.kr/">
@@ -133,12 +133,11 @@
                                             <button type="button" class="btn btn-warning"
                                                     onclick="start()">시작하기</button>
                                             <a href="/rank" class="btn btn-dark">랭킹보기</a>
-                                            <button type="button" class="btn btn-warning fshare">공유하기</button>
                                         </span>
                                     </div>
-                                    <div class="input-group divshare" style="display: none">
+                                    <div class="input-group">
                                                 <span class="input-group-btn">
-                                                <button type="button" class="btn btn-sm btn-dark fcopy">복사</button>
+                                                <button type="button" class="btn btn-dark fcopy">복사</button>
                                                 </span>
                                         <input type="text" class="form-control shareurl" value="localhost:5000/">
                                     </div>
@@ -498,14 +497,6 @@
                 })
 
             }
-
-            $('.wrapper-content').on('click', '.fshare', function (e) {
-                e.stopPropagation();
-                $(this).parent().next('.divshare').show();
-            });
-            $('.wrapper-content').on('click', '.divshare', function (e) {
-                e.stopPropagation();
-            });
             $('.wrapper-content').on('click', '.fcopy', function (e) {
                 e.stopPropagation();
                 $(this).parent().next('.shareurl').select();

@@ -37,14 +37,15 @@ def random_area():
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'})
 
         soup = BeautifulSoup(data.text, 'html.parser')
-        # image = soup.select_one("#mArticle > div.cont_essential > div:nth-child(1) > div.details_present > a > span.bg_present")
+        image = soup.select_one("#mArticle > div.cont_essential > div:nth-child(1) > div.details_present > a > span.bg_present")
+
         # images = image['style']
         # print(image)
-        # if not images:
-        #    images = None
+        # # if not images:
+        # #    images = None
         #
         # images=images.split('\'')[1]
-        # print(images)
+        print(image)
         # .replace(/^url(["']?/, ”).replace(/["']?)$/, ”)
         info = {'place_name': name, 'phone': phone, 'address': documents[i]['address_name'],
         'road_address': documents[i]['road_address_name'], 'place_url': documents[i]['place_url'],
