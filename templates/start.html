@@ -9,7 +9,7 @@
               content="음식점, 맛집, 데이트 코스, 위치별, 지역별, 월드컵, 회식, 결정장애">
         <meta property="og:title" content="음식점 월드컵, 고민고민하지마~ 음식점 월드컵으로 메뉴 정하자(MIJUNG)">
         <meta property="og:description" content="오늘의 메뉴가 고민스러울 때, 고민하지말고 월드컵으로 정해보자!">
-        <meta property="og:image" content="https://www.mijung.co.kr/ogimg.jpg">
+        <meta property="og:image" content="{{ url_for('static', filename='ogimage.jpg') }}">
         <meta property="og:url" content="https://www.mijung.co.kr/">
         <meta name="robots" content="noimageindex">
         <link rel="canonical" href="https://www.mijung.co.kr/">
@@ -21,16 +21,6 @@
 
     </head>
     <body class="top-navigation" style="padding: 0px;">
-<!--        <script type="text/javascript">-->
-<!--            /*$(window).on('load', function(){-->
-<!--            });*/-->
-<!--            $(document).ready(function () {-->
-
-<!--                if ($(window).height() > 414) {-->
-<!--                    $('html, body').animate({scrollTop: 65}, 1);-->
-<!--                }-->
-<!--            });-->
-<!--        </script>-->
         <div id="wrapper">
             <div id="page-wrapper" style="min-height:100%">
                 <nav class="navbar sticky-top navbar-light bg-dark">
@@ -65,17 +55,17 @@
                                     <div id="wright"
                                          style="width:50%;height:100%;max-width:50%;max-height:100%;background-color:gray;background-image: url('#');background-repeat:no-repeat;background-size:contain;background-position:left center;position:relative;left:50%;top:-100%;z-index:2"
                                          name="682082"></div>
-                                    <div style="width:100%;height:calc(3 * (1vw + 1vh - 1vmin));max-width:100%;max-height:50%;position:relative;left:0%;top:-200%;z-index:4;vertical-align:center;line-height:calc(3 * (1vw + 1vh - 1vmin));background-color: rgba( 0, 0, 0, 0.5 );color:#ecba52;font-size:calc(3 * (1vw + 1vh - 1vmin))">
+                                    <div style="width:100%; font-size:30px;max-width:100%;max-height:50%;position:relative;left:0%;top:-200%;z-index:4;vertical-align:center;background-color: black;color:#ecba52;">
                                         무작위 월드컵 16강 1/16
                                     </div>
 
-                                    <div style="width:100%;height:calc(7 * (1vw + 1vh - 1vmin));max-width:100%;max-height:50%;background-color:;position:relative;left:0%;top:-155%;z-index:4;color:white;font-size:calc(2 * (1vw + 1vh - 1vmin));text-shadow:-1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;-moz-text-shadow:-1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;-webkit-text-shadow:-1px 0 #000000,0 1px #000000,1px 0 #000000,0 -1px #000000;pointer-events:none;">
-                                        <div class="gray-bg row"
-                                             style="width:50%;display:inline-block;border-right: #181818;text-align:left;padding-right:10%">
+                                    <div style="width:100%;height:calc(7 * (1vw + 1vh - 1vmin));max-width:100%;max-height:50%;background-color:;position:relative;left:0%;top:-155%;z-index:4;color:black;font-size:calc(2 * (1vw + 1vh - 1vmin));pointer-events:none;">
+                                        <div class="gray-bg col"
+                                             style="width:50%;display:inline-block;border-right: #181818;text-align:left;margin:0% 5%">
                                             이름: <br>주소: <br>음식 종류:
                                         </div>
-                                        <div  class="gray-bg row"
-                                             style="width:50%;display:inline-block;text-align:left;padding-left:10%">
+                                        <div  class="gray-bg col"
+                                             style="width:50%;border-left: 1px solid black;display:inline-block;text-align:left;margin:0% 5%">
                                             이름: <br>주소: <br>음식 종류:
                                         </div>
                                     </div>
