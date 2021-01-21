@@ -2,15 +2,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>음식점 월드컵, 고민고민하지마~ 음식점 월드컵으로 메뉴 정하자(MIJUNG)</title>
-        <meta name="title" content="음식점 월드컵, 음식점 월드컵 만들기 미정, MIJUNG">
-        <meta name="description" content="오늘의 메뉴가 고민스러울 때, 고민하지말고 월드컵으로 정해보자!">
+        <title>음식점 고르기, 고민고민하지마~ 음식점 차트로 메뉴 정하자(MIJUNG)</title>
+        <meta name="title" content="음식점 고르기, 고민고민하지마~ 음식점 차트로 메뉴 정하자(MIJUNG)">
+        <meta name="description" content="음식점 고르기, 고민고민하지마~ 음식점 차트로 메뉴 정하자(MIJUNG)">
         <meta name="keywords"
               content="음식점, 맛집, 데이트 코스, 위치별, 지역별, 월드컵, 회식, 결정장애">
-        <meta property="og:title" content="음식점 월드컵, 고민고민하지마~ 음식점 월드컵으로 메뉴 정하자(MIJUNG)">
-        <meta property="og:description" content="오늘의 메뉴가 고민스러울 때, 고민하지말고 월드컵으로 정해보자!">
-        <meta property="og:image" content="{{ url_for('static', filename='ogimage.jpg') }}">
-        <meta property="og:url" content="https://www.mijung.co.kr/">
         <meta name="robots" content="noimageindex">
         <link rel="canonical" href="https://www.mijung.co.kr/">
         <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
@@ -74,12 +70,6 @@
                             <li class="nav-item list">
                                 <a class="nav-link " href="/">내 위치 기반 월드컵</a>
                             </li>
-                            <li class="nav-item list">
-                                <a class="nav-link" href="/category_index"> 지역별 카테고리 월그컵 </a>
-                            </li>
-                            <li class="nav-item list">
-                                <a class="nav-link" href="/make_category"> 지역별 카테고리 월그컵 만들기</a>
-                            </li>
                         </ul>
                     </div>
                 </nav>
@@ -113,26 +103,25 @@
                             <div class="wrapper wrapper-content">
                                 <div class="wrapper">
                                     <!--지도-->
-                                    <p>올림픽을 원하는 범위 만큼 지도를 마우스로 클릭하면 원 그리기가 시작되고,<br>
+                                    <p>차트를 원하는 범위 만큼 지도를 마우스로 클릭하면 원 그리기가 시작되고,<br>
                                         오른쪽 마우스를 클릭하면 원 그리기가 종료됩니다<br>
                                         음식점들의 분포를 보고싶다면 위에 버튼(음식점 새로고침)을 눌러보세요! 확대 축소후엔 한번 더 눌러주세요!</p>
                                     <div id="map" style="width:500px;height:400px;background-color:gray;"></div>
                                     <br>
-                                    <p>원하는 N강 수를 정하세요!<br> 많은 음식점들이 포함되어야 재밌어요~</p><br>
+                                    <p>원하는 차트목록 수를 정하세요!<br> 차트목록 수 보다 음식점이 많으면 랜덤으로 음식점 지정</p><br>
 
                                     <div>
                                         <select class="form-control n" style="width:500px;" data-op="open"
                                                 data-u="4Q19MZ">
-                                            <option value="16" selected="">16강</option>
-                                            <option value="8">8강</option>
-                                            <option value="4">4강</option>
+                                            <option value="16" selected="">16개</option>
+                                            <option value="8">8개</option>
+                                            <option value="4">4개</option>
                                         </select>
                                     </div>
                                     <div class="select-group">
                                         <span class="select-group-btn">
                                             <button type="button" class="btn btn-warning"
                                                     onclick="start()">시작하기</button>
-                                            <a href="/rank" class="btn btn-dark">랭킹보기</a>
                                         </span>
                                     </div>
                                     <div class="input-group">

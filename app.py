@@ -33,19 +33,19 @@ def random_area():
     for i in range(len(documents)):
         name = documents[i]['place_name']
         phone = documents[i]['phone']
-        data = requests.get(documents[i]['place_url'], headers={
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'})
+        # data = requests.get(documents[i]['place_url'], headers={
+        #     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'})
 
-        soup = BeautifulSoup(data.text, 'html.parser')
-        image = soup.select_one("#mArticle > div.cont_essential > div:nth-child(1) > div.details_present > a > span.bg_present")
+        # soup = BeautifulSoup(data.text, 'html.parser')
+        # image = soup.select_one("#mArticle > div.cont_essential > div:nth-child(1) > div.details_present > a > span.bg_present")
 
         # images = image['style']
         # print(image)
-        # # if not images:
-        # #    images = None
-        #
+        # if not images:
+        #    images = None
+        
         # images=images.split('\'')[1]
-        print(image)
+        # print(image)
         # .replace(/^url(["']?/, ”).replace(/["']?)$/, ”)
         info = {'place_name': name, 'phone': phone, 'address': documents[i]['address_name'],
         'road_address': documents[i]['road_address_name'], 'place_url': documents[i]['place_url'],
@@ -77,26 +77,6 @@ def post_random_start():
 @app.route('/start')
 def start():
     return render_template('start.html')
-
-
-@app.route('/rank')
-def rank():
-    return render_template('rank.html')
-
-
-@app.route('/fix')
-def fix():
-    return render_template('fix.html')
-
-
-@app.route('/category_index')
-def category_index():
-    return render_template('category_index.html')
-
-
-@app.route('/make_category')
-def make_category():
-    return render_template('make_category.html')
 
 
 if __name__ == '__main__':

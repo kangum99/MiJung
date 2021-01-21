@@ -2,15 +2,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>음식점 월드컵, 고민고민하지마~ 음식점 월드컵으로 메뉴 정하자(MIJUNG)</title>
-        <meta name="title" content="음식점 월드컵, 음식점 월드컵 만들기 미정, MIJUNG">
-        <meta name="description" content="오늘의 메뉴가 고민스러울 때, 고민하지말고 월드컵으로 정해보자!">
+        <title>음식점 고르기, 고민고민하지마~ 음식점 차트로 메뉴 정하자(MIJUNG)</title>
+        <meta name="title" content="음식점 고르기, 고민고민하지마~ 음식점 차트로 메뉴 정하자(MIJUNG)">
+        <meta name="description" content="음식점 고르기, 고민고민하지마~ 음식점 차트로 메뉴 정하자(MIJUNG)">
         <meta name="keywords"
               content="음식점, 맛집, 데이트 코스, 위치별, 지역별, 월드컵, 회식, 결정장애">
-        <meta property="og:title" content="음식점 월드컵, 고민고민하지마~ 음식점 월드컵으로 메뉴 정하자(MIJUNG)">
-        <meta property="og:description" content="오늘의 메뉴가 고민스러울 때, 고민하지말고 월드컵으로 정해보자!">
-        <meta property="og:image" content="{{ url_for('static', filename='ogimage.jpg') }}">
-        <meta property="og:url" content="https://www.mijung.co.kr/">
         <meta name="robots" content="noimageindex">
         <link rel="canonical" href="https://www.mijung.co.kr/">
         <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
@@ -31,13 +27,7 @@
                     <div class="nav" id="navbar">
                         <ul class="nav">
                             <li class="nav-item list">
-                                <a class="nav-link " href="/">내 위치 기반 월드컵</a>
-                            </li>
-                            <li class="nav-item list">
-                                <a class="nav-link" href="/category_index"> 지역별 카테고리 월그컵 </a>
-                            </li>
-                            <li class="nav-item list">
-                                <a class="nav-link" href="/make_category"> 지역별 카테고리 월그컵 만들기</a>
+                                <a class="nav-link " href="/">내 위치 기반 리스트</a>
                             </li>
                         </ul>
                     </div>
@@ -45,39 +35,38 @@
                 <div class="tad"><br></div>
                 <div class="wrapper wrapper-content" style="padding:0">
                     <div class="row gray-bg">
-                        <div class="col-lg-12" style="padding:0px">
-                            <div class="ibox float-e-margins" style="margin:0px">
-                                <div class="ibox-content"
-                                     style="height:90vh;text-align:center;padding:0px;background-color:#181818;">
-                                    <div id="wleft"
-                                         style="width:50%;height:100%;max-width:50%;max-height:100%;background-color:gray;background-image: url('#');background-repeat:no-repeat;background-size:contain;background-position:right center;position:relative;z-index:1"
-                                         name="682044"></div>
-                                    <div id="wright"
-                                         style="width:50%;height:100%;max-width:50%;max-height:100%;background-color:gray;background-image: url('#');background-repeat:no-repeat;background-size:contain;background-position:left center;position:relative;left:50%;top:-100%;z-index:2"
-                                         name="682082"></div>
-                                    <div style="width:100%; font-size:30px;max-width:100%;max-height:50%;position:relative;left:0%;top:-200%;z-index:4;vertical-align:center;background-color: black;color:#ecba52;">
-                                        무작위 월드컵 16강 1/16
-                                    </div>
-
-                                    <div style="width:100%;height:calc(7 * (1vw + 1vh - 1vmin));max-width:100%;max-height:50%;background-color:;position:relative;left:0%;top:-155%;z-index:4;color:black;font-size:calc(2 * (1vw + 1vh - 1vmin));pointer-events:none;">
-                                        <div class="gray-bg col"
-                                             style="width:50%;display:inline-block;border-right: #181818;text-align:left;margin:0% 5%">
-                                            이름: <br>주소: <br>음식 종류:
-                                        </div>
-                                        <div  class="gray-bg col"
-                                             style="width:50%;border-left: 1px solid black;display:inline-block;text-align:left;margin:0% 5%">
-                                            이름: <br>주소: <br>음식 종류:
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="row" style="margin: 10px;">
+                            <div style="margin: 10px;">
+                              <div>
+                                <h2>음식점 이름 : fdgsdfbdber</h2>
+                              <ul>
+                              <li>전화번호: </li>
+                              <li>지번 주소: </li>
+                              <li>도로명 주소: </li>
+                              <li>음식 카테고리: </li>
+                              </ul>
+                              </div>
+                              <a class="btn btn-default" href="#" role="button">지도로 위치보기</a>
+                            </div><!--/.col-xs-6.col-lg-4-->
+                        
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <script type="text/javascript">
-
+                // $.ajax({
+                //     type: "POST",
+                //     url: "/random/start",
+                //     data: {location_give: location, center_x_give: center_x, center_y_give: center_y, radius_give: radius, n_give: n},
+                //     success: function (response) {
+                //         if (response["result"] == "success") {
+                //             window.location.href = "/start";
+                //         } else {
+                //             alert("server error")
+                //         }
+                //     }
+                // })
 
         </script>
     </body>
